@@ -1,0 +1,40 @@
+checkpointing:
+    checkpoint_path: ./checkpoints
+    save_frequency: 2
+    resume: true
+device:
+    device: cuda
+    gpu_id: 0
+model:
+    # Use the flag to compress ADC value in log scale.
+    # log ADC = log2(ADC + 1)'
+    log: true
+    # The coefficient of the probability loss.
+    # See explanation of prob_lower_bound for more detail.
+    prob_lambda: 30
+    # The coefficient to the probability loss has
+    # the following formula:
+    # prob_lambda * max(0, prob. loss - prob_lower_bound)
+    # The rational behind this formula is that,
+    # when the probability of keeping a signal is
+    # low enough, we don't need to lower it any more.
+    prob_lower_bound: .1
+    # loss function for reconstruction
+    reco_loss_type: mae
+train:
+    num_epochs: 100
+    num_warmup_epochs: 20
+    batch_size: 4
+    # if batches_per_epoch is null, float('inf')
+    # will be used.
+    batches_per_epoch: 2000
+    learning_rate: 0.001
+    # Weight decay used in AdamW optimizer
+    weight_decay: 0.01
+    # The steps for every decrease of learning rate.
+    # We will be using MultiStepLR scheduler,
+    # and we will multiply the learning rate by a
+    # sched_gamma < 1 every sched_steps after
+    # num_warmup_epochs is reached.
+    sched_steps: 20
+    sched_gamma: .95
