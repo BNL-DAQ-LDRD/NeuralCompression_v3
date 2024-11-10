@@ -1,10 +1,10 @@
 """
-Utility functions for model training
+Utility functions
 """
-
 import os
 
-def get_data_root():
+
+def get_data_root(verbose=True):
     """
     Get root to data as an environment variable
     """
@@ -16,7 +16,8 @@ def get_data_root():
          'please run export DATAROOT=/path/to/your/data'
          'to set the environment variable.')
 
-    print(f'\nDATAROOT is set to: {data_root}\n')
+    if verbose:
+        print(f'\nDATAROOT is set to: {data_root}\n')
 
     return data_root
 
