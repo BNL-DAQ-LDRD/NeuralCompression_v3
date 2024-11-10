@@ -18,9 +18,9 @@ from torch.optim import AdamW
 from torch.optim.lr_scheduler import MultiStepLR
 
 # == package defined ========================================
-from neuralcompress_vs.datasets.dataset_tpc import DatasetTPC
-from neuralcompress_vs.models import BiModel, BiLoss
-from neuralcompress_vs.utils import (Cumulator,
+from neuralcompress_v3.datasets.dataset_tpc import DatasetTPC
+from neuralcompress_v3.models import BiModel, BiLoss
+from neuralcompress_v3.utils import (Cumulator,
                                      Checkpointer,
                                      get_lr,
                                      flatten_dict,
