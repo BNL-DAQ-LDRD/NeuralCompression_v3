@@ -1,4 +1,4 @@
-# Point-of-Interest Detection with Sparse Convolution
+# Variable Rate Neural Compression for Sparse Detector Data
 (work in progress)
 
 ## Install `MinkowskiEngine`
