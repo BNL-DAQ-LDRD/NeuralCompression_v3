@@ -1,7 +1,4 @@
-# Point-of-Interest Detection with Sparse Convolution
-(work in progress)
-
-## Install `MinkowskiEngine`
+# Install `MinkowskiEngine`
 Let's face it, installing `MinkowskiEngine` is a pain in you-know-where. But
 its performance is splendid (better than other alternatives I tried). And what
 could be more fun than pulling some hair off and figuring something out.
