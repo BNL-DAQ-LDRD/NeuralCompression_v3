@@ -13,7 +13,7 @@ Also, please provide your successful experience on installing `MinkowskiEngine`
 on your machine. I am sure someone out there will thank you wholeheartedly
 (and may even worship you as a god).
 
-## :boom::boom: Things that are NOT going to work without hacking the `MinkowskiEngine` source code :boom::boom:
+## Things that are NOT going to work without hacking the `MinkowskiEngine` source code
 With the current version of `MinkowskiEngine`,
 - **Python version >= 3.12 does NOT work!**
 - **NVCC version >= 12 does NOT work!**
@@ -168,7 +168,6 @@ and run
 ```
 python setup.py install --blas_include_dirs=${CONDA_PREFIX}/include --blas=openblas
 ```
-> I told you so, MinkowskiEngine needs `OpenBLAS` 😉
 
 I recommend creating a fork of the repo and cloning the fork.
-You may want to tweak it and make it better sometime in the future. I surely do 😃
+You may want to tweak it and make it better sometime in the future. I surely do!
