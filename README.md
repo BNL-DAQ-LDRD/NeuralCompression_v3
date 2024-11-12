@@ -9,7 +9,7 @@ tracking device in colliders.
 The key feature of `BCAE-VS` is that it compresses data not by 
 downsizing the input tensor to a uniform (smaller) size but by 
 downsampling the nonzero values (signal) in the sparse input. 
-More specifically, the encoder of `BCAE-VS`'s tags each signal 
+More specifically, the encoder of `BCAE-VS` tags each signal 
 with an importance score, and only those with high importance will
 be saved and used later for decoding. The compression scheme of 
 `BCAE-VS` implies the sparser the input, the smaller the compressed 
@@ -18,7 +18,7 @@ data.
 The encoder part of `BCAE-VS` is implemented with sparse convolution
 which utilizes the sparsity of the input by avoiding
 matrix multiplications with all-zero operands. In this study,
-we use the [`MinkowskiEngine`'s](https://github.com/NVIDIA/MinkowskiEngine)
+we use the [`MinkowskiEngine`](https://github.com/NVIDIA/MinkowskiEngine)'s
 implementation for sparse convolution kernels. 
 
 In the remainder of this read-me file, we will show how to install 
@@ -40,7 +40,7 @@ conda activate py311-me
 ## Clone the repository
 Get a clone of the `NeuralCompression_v3` repository by running
 ```
-git clone https://github.com/pphuangyi/sparse_poi/tree/main
+git clone https://github.com/BNL-DAQ-LDRD/NeuralCompression_v3/tree/main
 ```
 then
 ```
