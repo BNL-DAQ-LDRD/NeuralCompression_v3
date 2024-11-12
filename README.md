@@ -79,4 +79,20 @@ export DATAROOT=path_to_outer/outer
 ```
  
 ## Train 
+To train a `BCAE-VS` model on TPC data with the default config, cd into the `train` folder and run
+```
+python train.py config.yaml
+```
+> Note: during training, if the `keep_ratio_soft` remains around .5, we may consider restart the training. 
 
+## Evaluate or compress
+Assuming a pretrained model is saved at `checkpoints/bi_lambda-30_lb-10/model_last.pth`, to evaluate its performance on TPC data, we can run the following command:
+```
+python evaluate/evaluate.py checkpoints/bi_lambda-30_lb-10 --split test --device cuda --gpu-id 0 --precision full --compressed-path ./compresse --result-csv-path ./result.csv
+```
+If `--compressed-path` is not used, compressed data will not be saved.
+
+If we just want to compress the data, we can run the following command:
+```
+python compress.py ../checkpoints/bi_lambda-30_lb-10/ --split test --device cuda --gpu-id 1 --compressed-path ./compresse
+```
